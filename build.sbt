@@ -19,4 +19,8 @@ libraryDependencies ++= {
   )
 }
 
+unmanagedResourceDirectories in Compile <++= baseDirectory {
+  base => Seq(base / "src/main/angular")
+}
+
 Revolver.settings
