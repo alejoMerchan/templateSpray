@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app = "miApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="ramosListCtrl">
+
+<ul>
+    <li ng-repeat="solicitud in solicitudes">
+
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th>Incidente</th>
+                <th>Solicitud</th>
+                <th>Estado</th>
+                <th>Alcance</th>
+                <th>Fecha</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{solicitud.nmIncidente}}</td>
+                <td>{{solicitud.numeroSolicitud}}</td>
+                <td>{{solicitud.dsEstado}}</td>
+                <td>{{solicitud.alcance}}</td>
+                <td>{{solicitud.fechaTran}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </li>
+</ul>
+
+
+
+
+</body>
+</html>
